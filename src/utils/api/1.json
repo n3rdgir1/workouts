@@ -1,0 +1,37 @@
+{
+  "challenge": {
+      "name": "7 Day Ab Challenge",
+      "days": [
+      {
+        "day": 1,
+        "exercises": [
+          {
+            "name": "exercise 1",
+            "time": 45
+          },
+          {
+            "name": "exercise 2",
+            "reps": 20
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "exercises": [
+          {
+            "name": "exercise 1",
+            "time": 45
+          },
+          {
+            "name": "exercise 2",
+            "reps": 25
+          },
+          {
+            "name": "exercise 3",
+            "reps": 25
+          }
+        ]
+      }
+    ]
+  }
+}
