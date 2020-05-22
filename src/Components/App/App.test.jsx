@@ -2,7 +2,7 @@ import React from 'react';
 import { render, act } from '@testing-library/react';
 import App from './App';
 
-jest.mock('../Challenge/Challenge');
+jest.mock('../ChallengeLink/ChallengeLink');
 jest.useFakeTimers();
 
 describe('App', () => {
@@ -32,6 +32,15 @@ describe('App', () => {
         expect(challenge).toHaveAttribute('link', link);
         expect(challenge).toHaveAttribute('id', id.toString());
       });
+    });
+
+    it.skip('switches to the challenge when clicked', () => {
+      // eslint-disable-next-line global-require
+      const currentChallenge = require('../../utils/api/1.json').challenge;
+      const { title } = currentChallenge;
+
+      getByTestId(`${title}-onClick`).click();
+      expect(getByTestId(title)).not.toBeInTheDocument();
     });
   });
 });

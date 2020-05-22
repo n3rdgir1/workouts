@@ -20,19 +20,14 @@ describe('requests', () => {
     });
   });
 
-  describe('list', () => {
+  describe('getChallenge', () => {
     const challengeId = faker.random.arrayElement([1]);
     it('should have the correct top level shape', (done) => {
       getChallenge(challengeId)
         .then((result) => {
           expect(result.challenge).toBeDefined();
-          expect(result.challenge.name).toBeDefined();
+          expect(result.challenge.title).toBeDefined();
           expect(result.challenge.days).toBeDefined();
-          // const day = faker.random.arrayElement(result.challenge);
-          // expect(day.day).toBeDefined();
-          // const exercise = faker.random.arrayElement(day.exercises);
-          // expect(exercise.name).toBeDefined();
-          // expect(exercise.name || exercise.reps).toBeDefined();
           done();
         });
       jest.advanceTimersByTime(1000);
